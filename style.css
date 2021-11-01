@@ -1,0 +1,245 @@
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+*
+{
+    font-family: 'Oswald', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #060c21;
+    animation: fadeInAnimation ease 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.form
+{
+    position: relative;
+    border: 1px solid #000;
+    background: #060c21;
+    width: 350px;
+    padding: 40px 40px 60px;
+    border-radius: 10px;
+    text-align: center;
+}
+.form::before
+{
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    background: linear-gradient(315deg,#03506F,#FF4C29);
+    z-index: -1;
+    transform: skew(2deg,1deg);
+    border-radius: 10px;
+}
+.form h2
+{
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.form .input
+{
+    margin-top: 40px;
+    text-align: left;
+}
+.form .input .inputBox
+{
+    margin-top: 10px;
+}
+.form .input .inputBox label
+{
+    display: block;
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.form .input .inputBox input
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    background:linear-gradient(315deg,#FF4C29,#03506F) ;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.form .input .inputBox input[type="submit"]
+{
+    cursor: pointer;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+.form .input .inputBox input[type="submit"]:hover
+{
+    background:linear-gradient(315deg,#03506F,#FF4C29) ;
+}
+.form .input .inputBox input[type="submit"]:active
+{
+    color: rgba(255, 255, 255, 0.521);
+    background:linear-gradient(315deg,#FF4C29,#03506F) ;
+}
+.form input[type="button"]:hover
+{
+    background:linear-gradient(315deg,#03506F,#FF4C29);
+    cursor: pointer;
+}
+.forgot
+{
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.forgot a
+{
+    color: #ff0800;
+}
+
+.fa-wrench:hover {
+	animation: wrench 1s cubic-bezier(.36,.07,.57,.99) infinite;
+  cursor: pointer;
+}
+
+.fa-home:hover {
+	animation: wrench 1s cubic-bezier(.36,.07,.57,.99) infinite;
+  cursor: pointer;
+}
+
+@keyframes wrench {
+	0% {
+		transform: scale(1.5) rotate(0);
+	}
+	20% {
+		transform: scale(1.5) rotate(30deg);
+	}
+	30% {
+		transform: scale(1.5) rotate(-20deg);
+	}
+	50% {
+		transform: scale(1.5) rotate(30deg);
+	}
+	60% {
+		transform: scale(1.5) rotate(-20deg);
+	}
+	100% {
+		transform: scale(1.5) rotate(0);
+	}
+}
+
+
+@keyframes ripple {
+  0% {
+    transform: scale(.3);
+    background-color: yellow;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: #FF4C29;
+    border-radius: 50%;
+  }
+}
+
+.circle-ripple{
+  background-color: #FF4C29;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  animation: ripple 5s linear;
+  transform: scale(1.5);
+  border-radius: 50%;
+}
+
+
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.avatar {
+	width: 150px;
+	height: 150px;
+	border: double 4px transparent;
+  background-image:  radial-gradient(circle at top left, #03506F,#FF4C29);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+}
+
+.avatar:hover{
+	animation: float 6s ease-in-out infinite;
+  background-image: radial-gradient(circle at top left,#FF4C29,#03506F);
+}
+
+img { width: 100%; height: auto; }
+
+h1 {
+  font-family: 'Inconsolata', Consolas, monospace;
+	font-size: 4em;
+	color: #d7b94c;
+}
+
+@keyframes mytitle{
+	0% {
+    letter-spacing: 5px;
+	}
+	50% {
+    letter-spacing: 10px;
+	}
+	100% {
+    letter-spacing: 5px;
+	}
+}
+
+.mytitletext{
+	animation: mytitle 4s infinite;
+  text-align: center;
+}
+
